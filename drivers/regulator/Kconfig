@@ -1057,5 +1057,43 @@ config REGULATOR_WM8994
 	  This driver provides support for the voltage regulators on the
 	  WM8994 CODEC.
 
+config REGULATOR_G22XX_CORE
+	bool
+	depends on I2C
+	help
+	  GMT G2227/G2237 common codes
+
+config REGULATOR_G2227
+	tristate "GMT G2227 Power regulators"
+	depends on I2C && ARCH_REALTEK
+	select RTK_REGMAP_I2C
+	select REGULATOR_G22XX_CORE
+	help
+	  This driver provides support for the voltage regulators on the
+	  GMT G2227 PMIC.
+
+config REGULATOR_G2237
+	tristate "GMT G22237 Power regulators"
+	depends on I2C && ARCH_REALTEK
+	select RTK_REGMAP_I2C
+	select REGULATOR_G22XX_CORE
+	help
+	  This driver provides support for the voltage regulators on the
+	  GMT G2237 PMIC.
+
+config REGULATOR_RTKGPIO
+	tristate "RTK GPIO Power regulators"
+	depends on ARCH_REALTEK
+	help
+	  This driver provides support for the voltage regulators on the
+	  RTK GPIO REGULATOR.
+
+config REGULATOR_RTD119X_GPIO
+	depends on ARCH_RTD119X
+	tristate "Realtek RTD-119x GPIO regulators"
+	help
+	  This driver provides support for the voltage regulator on the
+	  RTD-119x Platform.
+
 endif
 

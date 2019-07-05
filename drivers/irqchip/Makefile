@@ -97,3 +97,8 @@ obj-$(CONFIG_SIFIVE_PLIC)		+= irq-sifive-plic.o
 obj-$(CONFIG_IMX_IRQSTEER)		+= irq-imx-irqsteer.o
 obj-$(CONFIG_MADERA_IRQ)		+= irq-madera.o
 obj-$(CONFIG_LS1X_IRQ)			+= irq-ls1x.o
+obj-$(CONFIG_ARCH_RTD119X)              += irq-rtd119x.o
+obj-$(CONFIG_ARCH_RTD129x) 		+= irq-rtd129x.o
+obj-$(CONFIG_ARCH_RTD139x) 		+= irq-rtd139x.o
+obj-$(CONFIG_ARCH_RTD16xx)              += irq-rtd16xx.o
+

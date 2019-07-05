@@ -872,6 +872,10 @@ struct ata_port {
 	struct delayed_work	hotplug_task;
 	struct work_struct	scsi_rescan_task;
 
+#ifdef CONFIG_AHCI_RTK
+	unsigned int hotplug_flag;
+#endif
+
 	unsigned int		hsm_task_state;
 
 	u32			msg_enable;

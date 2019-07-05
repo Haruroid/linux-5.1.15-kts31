@@ -1,0 +1,10 @@
+#
+# Phy drivers for Realtek platforms
+#
+config PHY_RTK_SATA
+	tristate "Realtek SATA PHY driver"
+	depends on OF
+    depends on ARCH_REALTEK
+	select GENERIC_PHY
+	help
+	  Support for SATA GEN3 PHY on realtek chipsets.

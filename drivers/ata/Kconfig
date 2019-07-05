@@ -117,6 +117,17 @@ config SATA_AHCI_PLATFORM
 
 	  If unsure, say N.
 
+config AHCI_RTK
+    tristate "Realtek AHCI SATA support"
+	depends on ARCH_REALTEK
+	depends on SUSPEND
+	select PHY_RTK_SATA
+    help
+      This option enables support for Realtek AHCI Serial ATA
+      controllers.
+
+      If unsure, say N.
+
 config AHCI_BRCM
 	tristate "Broadcom AHCI SATA support"
 	depends on ARCH_BRCMSTB || BMIPS_GENERIC || ARCH_BCM_NSP || \
